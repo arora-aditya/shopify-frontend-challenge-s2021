@@ -13,7 +13,7 @@ export const getMoviesBySearchTerm = async (searchTerm: string): Promise<OMDBRes
 }
 
 export const getShortLink = async (url: string): Promise<CuttlyResponse> => {
-  const response = await fetch(`https://thingproxy.freeboard.io/fetch/https://cutt.ly/api/api.php?key=${process.env.REACT_APP_CUTTLY_API_KEY}&short=${url}`, {
+  const response = await fetch(`https://cutt.ly/api/api.php?key=${process.env.REACT_APP_CUTTLY_API_KEY}&short=${url}`, {
     cache: 'no-cache',
     headers: {
       'Content-Type': 'application/json'

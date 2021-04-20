@@ -15,7 +15,7 @@ import {Movie, MovieListType, OMDBErrors} from './types';
 import MovieList from './MovieList';
 import SearchBar from './SearchBar/SearchBar';
 import {getMoviesBySearchTerm} from './handlers';
-import trophy from './assets/trophy.svg';
+import trophy from './assets/trophy.png';
 
 function App() {
 
@@ -103,7 +103,7 @@ function App() {
 
   return (
     <Page  
-      thumbnail={<Thumbnail source={trophy} size="small" alt="trophy icon" />}
+      thumbnail={<Thumbnail source={trophy} alt="trophy icon" size="small"/>}
       title="The Shoppies"
       primaryAction={
         <Stack>

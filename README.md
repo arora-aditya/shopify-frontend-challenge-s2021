@@ -3,7 +3,7 @@
 Created by Aditya Arora for the [Shopify Frontend Developer Challenge](https://docs.google.com/document/d/1SdR9rQpocsH5rPTOcxr9noqHRld5NJlylKO9Hf94U8U/edit#) for Summer 2021
 
 ## Deployment
-Deployment can be found at 
+Deployment can be found at https://romantic-sinoussi-113ddb.netlify.app
 
 ## Build steps
 

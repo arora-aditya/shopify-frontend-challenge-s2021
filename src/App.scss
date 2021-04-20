@@ -3,6 +3,11 @@
   cursor: auto;
 }
 
+.Polaris-Thumbnail{
+  border: none !important;
+  background: none !important;
+}
+
 @media print {
   .Polaris-Button {
     display: none;
