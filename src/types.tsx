@@ -28,7 +28,7 @@ export class Movie {
 
 export class CuttlyResponse {
   constructor (data: any) {
-    this.shortlink = data.url.shortLink;
+    this.shortlink = data.link;
   }
 
   shortlink: string;

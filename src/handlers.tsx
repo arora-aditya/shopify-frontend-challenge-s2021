@@ -13,12 +13,15 @@ export const getMoviesBySearchTerm = async (searchTerm: string): Promise<OMDBRes
 }
 
 export const getShortLink = async (url: string): Promise<CuttlyResponse> => {
-  const response = await fetch(`https://cutt.ly/api/api.php?key=${process.env.REACT_APP_CUTTLY_API_KEY}&short=${url}`, {
-    cache: 'no-cache',
-    headers: {
-      'Content-Type': 'application/json'
-    },
+  const response = await fetch('https://api-ssl.bitly.com/v4/shorten', {
+      method: 'POST',
+      headers: {
+          'Authorization': `Bearer ${process.env.REACT_APP_LS_API_KEY}`,
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ "long_url": url, "domain": "bit.ly" })
   });
+
   const cuttly_response = await response.json();
   return new CuttlyResponse(cuttly_response);
 }
