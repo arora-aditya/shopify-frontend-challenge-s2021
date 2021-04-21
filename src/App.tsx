@@ -25,6 +25,7 @@ function App() {
 
   
   const [isLoading, setIsLoading] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [movies, setMovies] = useState<Movie[]>([]);
   const [nominations, setNominations] = useState(readNominationsFromLocalStorage());
@@ -69,6 +70,7 @@ function App() {
 
   const clear = () => {
     setIsLoading(false);
+    setIsDismissed(false);
     setSearchValue("");
     setMovies([]);
     setNominations([]);
@@ -133,9 +135,9 @@ function App() {
       </Suspense>
       <Layout>
         {
-          nominations.length === 5 &&
+          nominations.length === 5 && !isDismissed &&
           <Layout.Section>
-            <Banner title="You did it!" status="success" onDismiss={() => {}}>
+            <Banner title="You did it!" status="success" onDismiss={() => setIsDismissed(true)}>
               <p>You have successfully picked your five nominations for the Shoppies.</p>
             </Banner>
           </Layout.Section>

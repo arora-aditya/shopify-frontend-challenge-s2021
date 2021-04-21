@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import SharedList from './SharedList/SharedList';
 
 ReactDOM.render(
-  <Router basename="/shopify-frontend-challenge">
+  <Router basename="/">
     <AppProvider i18n={enTranslations}>
       <Route exact path="/" component={App} />
       <Route path="/list/:nominations" component={SharedList} />
